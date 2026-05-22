@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finale | Michele Sorrentino</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: black;
+            color: white;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            height: 60px;
+            background: #0f172a;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 0 30px;
+            z-index: 10;
+            position: relative;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .stage {
+            height: calc(100vh - 60px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle, #3a0b00, #000 70%);
+        }
+
+        .video-box {
+            width: 80vw;
+            max-width: 900px;
+            border: 6px solid orange;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 0 80px orange;
+            animation: videoDisappear 1s ease forwards;
+            animation-delay: 10s;
+        }
+
+        video {
+            width: 100%;
+            display: block;
+        }
+
+        .flash {
+            position: fixed;
+            inset: 0;
+            background: white;
+            opacity: 0;
+            pointer-events: none;
+            animation: flashBang 1.2s ease forwards;
+            animation-delay: 10.2s;
+            z-index: 50;
+        }
+
+        .explosion {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background: radial-gradient(circle, white 0%, yellow 20%, orange 45%, red 70%, transparent 72%);
+            opacity: 0;
+            animation: explode 1.4s ease-out forwards;
+            animation-delay: 10.25s;
+            z-index: 60;
+        }
+
+        .claim {
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(circle, #5a1300, #000 70%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            opacity: 0;
+            visibility: hidden;
+            animation: showClaim 0.5s ease forwards;
+            animation-delay: 11.5s;
+            z-index: 100;
+            text-align: center;
+        }
+
+        .claim h1 {
+            font-size: clamp(5rem, 18vw, 16rem);
+            margin: 0;
+            color: #ffd700;
+            font-weight: 900;
+            text-shadow:
+                0 0 20px white,
+                0 0 50px yellow,
+                0 0 100px orange,
+                0 0 160px red;
+            animation: textBoom 0.8s ease-out forwards, pulse 1s infinite alternate;
+            animation-delay: 11.5s, 12.3s;
+            transform: scale(0);
+        }
+
+        .claim p {
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            color: #ffd28a;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .claim a {
+            margin-top: 30px;
+            background: linear-gradient(135deg, red, orange, yellow);
+            color: black;
+            padding: 18px 50px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.2rem;
+        }
+
+        .flames {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: -20px;
+            height: 160px;
+            z-index: 120;
+            display: flex;
+            justify-content: space-around;
+            opacity: 0;
+            animation: showFlames 0.5s ease forwards;
+            animation-delay: 11.5s;
+            pointer-events: none;
+        }
+
+        .flame {
+            width: 45px;
+            height: 140px;
+            position: relative;
+            animation: flicker 0.35s infinite alternate;
+        }
+
+        .flame::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 45px;
+            height: 140px;
+            transform: translateX(-50%);
+            background: linear-gradient(to top, red, orange, yellow);
+            border-radius: 50% 50% 25% 25%;
+            filter: blur(2px);
+        }
+
+        .flame::after {
+            content: "";
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            width: 22px;
+            height: 85px;
+            transform: translateX(-50%);
+            background: linear-gradient(to top, white, yellow, orange);
+            border-radius: 50% 50% 25% 25%;
+        }
+
+        @keyframes videoDisappear {
+            to {
+                opacity: 0;
+                transform: scale(1.8);
+                filter: blur(20px) brightness(4);
+            }
+        }
+
+        @keyframes flashBang {
+            0% { opacity: 0; }
+            15% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        @keyframes explode {
+            0% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(0);
+            }
+            60% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(18);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(30);
+            }
+        }
+
+        @keyframes showClaim {
+            to {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        @keyframes textBoom {
+            0% { transform: scale(0); }
+            70% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.05); }
+        }
+
+        @keyframes showFlames {
+            to { opacity: 1; }
+        }
+
+        @keyframes flicker {
+            from { transform: scaleY(0.9) rotate(-3deg); opacity: 0.85; }
+            to { transform: scaleY(1.25) rotate(3deg); opacity: 1; }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">MS</a>
+        <a href="index.html">Home</a>
+        <a href="career.html">Career</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main class="stage">
+        <div class="video-box">
+            <video autoplay muted playsinline preload="auto">
+                <source src="video/video_skate.MP4" type="video/mp4">
+            </video>
+        </div>
+    </main>
+
+    <div class="flash"></div>
+    <div class="explosion"></div>
+
+    <div class="claim">
+        <h1>HIRE ME</h1>
+        <p>Michele Sorrentino · GRC / ERM · Risk &amp; Compliance</p>
+        <a href="contact.html">GET IN TOUCH →</a>
+    </div>
+
+    <div class="flames">
+        <div class="flame"></div>
+        <div class="flame"></div>
+        <div class="flame"></div>
+        <div class="flame"></div>
+        <div class="flame"></div>
+        <div class="flame"></div>
+        <div class="flame"></div>
+        <div class="flame"></div>
+        <div class="flame"></div>
+        <div class="flame"></div>
+    </div>
+</body>
+</html>

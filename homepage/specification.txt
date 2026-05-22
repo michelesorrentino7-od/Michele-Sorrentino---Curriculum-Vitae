@@ -1,0 +1,119 @@
+HTML Tags Used (10 distinct, excluding html/head/body/title):
+1.  nav       – sticky responsive navbar on every page
+2.  main      – primary page content wrapper for semantic structure
+3.  section   – semantic grouping for hero, stats, portfolio, hobbies, contact, etc.
+4.  article   – individual cards for projects, hobbies, and career timeline entries
+5.  ul        – navbar lists, achievement lists, project details, contact details
+6.  li        – individual list items throughout the website
+7.  a         – hyperlinks between pages, email link, LinkedIn link, CTA buttons
+8.  h1        – main page heading on each page
+9.  h2        – section headings such as About, Experience, Projects, Languages
+10. h3        – card titles, role titles, education institutions and project names
+11. p         – body copy, descriptions and supporting text
+12. button    – navbar toggler, dark mode toggle, project filters, finale skip button
+13. form      – contact form container on contact page
+14. input     – name, email and subject fields in contact form
+15. textarea  – message field in contact form
+16. label     – accessible labels for contact form fields
+17. footer    – footer displayed across all pages
+18. strong    – emphasis on achievements and numerical results
+19. hr        – decorative section dividers
+20. span      – badges, icons, navbar text, timeline dots and labels
+21. img       – profile photo and hobby images
+22. video     – embedded video player on finale page
+23. canvas    – HTML5 canvas for finale particle explosion
+24. audio     – background music element on finale page
+25. meta      – SEO description, author, keywords and Open Graph metadata
+26. link      – Bootstrap and custom stylesheet imports
+27. script    – Bootstrap JavaScript and page-level JavaScript
+
+CSS Selectors Used (5+):
+1.  body              – base font, background, text colour and dark-mode transition
+2.  nav               – navbar background and shadow
+3.  #hero             – full-width gradient hero banner
+4.  footer            – dark footer bar
+5.  .card             – card appearance and hover effect
+6.  .dark-mode        – dark theme overrides
+7.  .section-title    – consistent section heading style
+8.  .title-line       – accent divider under headings
+9.  .skill-badge      – pill-shaped skill and competency tags
+10. .profile-img      – circular homepage profile photo
+11. .hobby-card-img   – fixed-height hobby image cards
+12. .timeline         – vertical career timeline layout
+13. .timeline-item    – scroll-reveal timeline entries
+14. .timeline-dot     – visual marker for timeline entries
+15. .filter-btn       – project category filter buttons
+16. .contact-links    – contact information list styling
+17. input, textarea   – form input styling and focus states
+18. .finale-page      – finale page dark visual theme
+19. .flame            – animated flame elements
+20. #explosionCanvas  – full-screen particle animation layer
+21. #hireMeOverlay    – final HIRE ME full-screen overlay
+22. #hireMeText       – animated HIRE ME title
+23. .music-note       – floating finale music note elements
+24. @media            – responsive adjustments
+25. @keyframes        – burn, flicker, shine, hirePulse and float-note animations
+
+CSS Properties Used (5+):
+1.  font-family        – Inter font applied site-wide
+2.  background-color   – body, navbar, footer, stats bar and dark mode
+3.  background         – gradients for hero and finale effects
+4.  color              – text, badges, dark mode and accent colours
+5.  transition         – hover states, dark mode, timeline reveal and overlay effects
+6.  border-radius      – cards, badges, inputs, profile image and buttons
+7.  box-shadow         – navbar, cards, profile photo and video glow
+8.  transform          – hover lift, timeline reveal, flame motion and HIRE ME pop
+9.  padding            – spacing for hero, sections, cards and footer
+10. margin             – spacing between sections and components
+11. opacity            – timeline reveal, overlay fade and animated effects
+12. letter-spacing     – overline text, finale subtitles and badges
+13. animation          – finale flames, text shine, pulse and floating notes
+14. object-fit         – image cropping for profile and hobby images
+15. object-position    – profile image positioning
+16. position           – timeline, flames, canvas and overlay layering
+17. z-index            – stacking order for finale effects
+18. display            – layout, hide/show project cards and overlay states
+19. width / height     – images, progress bars, canvas and media elements
+20. filter             – finale glow and flame blur effects
+
+JavaScript Features:
+- Dark mode toggle appears on the main pages and uses localStorage so the selected theme persists across pages.
+- Career page uses IntersectionObserver to reveal timeline cards as they enter the viewport.
+- Contact page uses the native Constraint Validation API with checkValidity and was-validated to validate fields.
+- Contact form builds a mailto link dynamically so the visitor’s email client opens with subject and body prefilled.
+- Projects page uses data-filter and data-category attributes to filter cards without inline onclick handlers.
+- Projects filter buttons update aria-pressed for better accessibility.
+- Finale page dynamically generates animated flames based on viewport width.
+- Finale page uses an HTML5 canvas particle system to create explosions.
+- Finale sequence is triggered when the video ends or when the user clicks “Skip to finale”.
+- Finale page displays a HIRE ME overlay with CSS pop animation and floating music note elements.
+- JavaScript avoids inline event handlers and uses addEventListener for cleaner behaviour.
+
+Bootstrap Features Used:
+- Responsive collapsible navbar with navbar-expand-lg and data-bs-toggle="collapse".
+- Grid system with container, row, col-md-*, col-lg-*, and col-auto.
+- Utility classes including shadow-sm, d-flex, flex-wrap, gap-*, d-none, badge, fw-bold, text-muted, justify-content-center and h-100.
+- Bootstrap buttons for navigation CTAs, contact form submission, project filters and finale skip button.
+- Bootstrap card components for career, education, certifications, hobbies, contact and projects.
+- Bootstrap form validation styles including was-validated and invalid-feedback.
+- Bootstrap progress bars for language proficiency on career.html.
+- Bootstrap alert component on contact.html to explain the email form behaviour.
+
+Pages (6 total):
+1. index.html    – Homepage with hero, profile image, stats bar, about section, key achievements and core competencies
+2. career.html   – Career timeline, education, certifications and languages
+3. hobbies.html  – Five hobby cards: Surfing, Brazilian Jiu-Jitsu, Computers & Tech, Cooking and Chess
+4. projects.html – Six filterable project cards covering GRC, audit, security, tech and CS50 work
+5. contact.html  – Contact information and validated mailto-based contact form
+6. finale.html   – Animated finale page with flames, video player, canvas particle explosion, music and HIRE ME overlay
+
+Technical Improvements Implemented:
+- Added SEO meta descriptions, author metadata, keywords and Open Graph tags.
+- Added semantic main, section and article elements.
+- Added aria-label, aria-current and aria-pressed attributes where relevant.
+- Removed inline onclick handlers and replaced them with addEventListener.
+- Moved Bootstrap JavaScript loading to the end of the body.
+- Added width, height and loading attributes to images where appropriate.
+- Replaced fake contact form success message with a working mailto-based flow.
+- Fixed finale.html by completing the broken JavaScript sequence.
+- Added a fallback Skip to finale button for usability.

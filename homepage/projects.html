@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Selected projects by Michele Sorrentino across GRC, ERM, internal audit, third-party assurance, loss prevention, technology and CS50 web development.">
+    <meta name="author" content="Michele Sorrentino">
+    <meta name="keywords" content="Michele Sorrentino projects, GRC projects, ERM, audit programme, third-party assurance, loss prevention, CS50 homepage">
+
+    <meta property="og:title" content="Projects | Michele Sorrentino">
+    <meta property="og:description" content="Selected professional and technical projects across governance, risk, compliance, audit, security and technology.">
+    <meta property="og:type" content="website">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+
+    <title>Projects | Michele Sorrentino</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html" aria-label="Michele Sorrentino homepage">MS</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="career.html">Career</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hobbies.html">Hobbies</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="projects.html" aria-current="page">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="finale.html">Finale</a></li>
+                </ul>
+
+                <button id="darkToggle" class="btn btn-outline-light btn-sm ms-lg-3" type="button" aria-label="Toggle dark mode">
+                    🌙 Dark
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero">
+            <div class="container text-white text-center py-5">
+                <p class="overline-text mb-2">Selected Work</p>
+                <h1 class="display-4 fw-bold">Projects</h1>
+                <p class="lead mx-auto mt-3" style="max-width: 760px;">
+                    Key initiatives across governance, risk, compliance, audit, security, technology and operational transformation.
+                </p>
+            </div>
+        </section>
+
+        <section class="container my-5" aria-labelledby="projects-title">
+            <h2 id="projects-title" class="section-title text-center">Project Portfolio</h2>
+            <hr class="title-line mx-auto">
+
+            <div class="d-flex flex-wrap gap-2 mb-4 justify-content-center" role="group" aria-label="Project filters">
+                <button class="btn btn-sm filter-btn active" type="button" data-filter="all" aria-pressed="true">All</button>
+                <button class="btn btn-sm filter-btn" type="button" data-filter="grc" aria-pressed="false">GRC / Risk</button>
+                <button class="btn btn-sm filter-btn" type="button" data-filter="audit" aria-pressed="false">Audit</button>
+                <button class="btn btn-sm filter-btn" type="button" data-filter="tech" aria-pressed="false">Tech</button>
+                <button class="btn btn-sm filter-btn" type="button" data-filter="security" aria-pressed="false">Security</button>
+            </div>
+
+            <div class="row g-4" id="projectGrid">
+                <div class="col-md-6 project-item" data-category="grc">
+                    <article class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+                                <span class="project-icon" aria-hidden="true">📊</span>
+                                <span class="badge bg-accent">Zalando · 2023–Present</span>
+                            </div>
+
+                            <h3 class="h5 fw-bold">ERM Framework Expansion</h3>
+
+                            <p class="card-text">
+                                Integrated operational, QHSSE and strategic risks into the enterprise framework, expanding risk coverage and improving compliance visibility across Southern Europe logistics.
+                            </p>
+
+                            <ul class="small">
+                                <li>Expanded ERM risk coverage by <strong>40%</strong>.</li>
+                                <li>Closed <strong>25%</strong> of compliance gaps within 18 months.</li>
+                                <li>Developed risk taxonomy, KRIs and control expectations.</li>
+                            </ul>
+
+                            <div class="d-flex flex-wrap gap-1 mt-3">
+                                <span class="skill-badge">ERM</span>
+                                <span class="skill-badge">CSRD</span>
+                                <span class="skill-badge">KRI / KPI</span>
+                                <span class="skill-badge">GDPR</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 project-item" data-category="audit">
+                    <article class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+                                <span class="project-icon" aria-hidden="true">🔍</span>
+                                <span class="badge bg-accent">Zalando · 2021–2023</span>
+                            </div>
+
+                            <h3 class="h5 fw-bold">Third-Party Audit Programme Redesign</h3>
+
+                            <p class="card-text">
+                                Re-designed the end-to-end audit programme for 30+ logistics providers, introducing clearer control expectations, ownership structures, remediation governance and escalation paths.
+                            </p>
+
+                            <ul class="small">
+                                <li>Delivered <strong>€1.2M</strong> in cost savings.</li>
+                                <li>Improved finding closure rate from <strong>25% to 55%</strong> by the second annual cycle.</li>
+                                <li>Reduced audit cycle time by <strong>30%</strong>, from 24 to 16 weeks.</li>
+                            </ul>
+
+                            <div class="d-flex flex-wrap gap-1 mt-3">
+                                <span class="skill-badge">Internal Audit</span>
+                                <span class="skill-badge">3PL Governance</span>
+                                <span class="skill-badge">CAPA</span>
+                                <span class="skill-badge">SLA / KPI</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 project-item" data-category="security">
+                    <article class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+                                <span class="project-icon" aria-hidden="true">🛡️</span>
+                                <span class="badge bg-accent">Zalando · 2019–2023</span>
+                            </div>
+
+                            <h3 class="h5 fw-bold">Loss Prevention Programme</h3>
+
+                            <p class="card-text">
+                                Led security and loss prevention across 12 sites in 5 countries, managing outsourced guarding services and strengthening incident, shrinkage and vendor governance.
+                            </p>
+
+                            <ul class="small">
+                                <li>Reduced incident rate by <strong>15%</strong> and shrinkage by <strong>20%</strong>.</li>
+                                <li>Prevented approximately <strong>€2.3M</strong> in annual losses.</li>
+                                <li>Generated <strong>€2M+</strong> in cost savings through supplier optimisation.</li>
+                            </ul>
+
+                            <div class="d-flex flex-wrap gap-1 mt-3">
+                                <span class="skill-badge">Loss Prevention</span>
+                                <span class="skill-badge">Risk Assessment</span>
+                                <span class="skill-badge">Vendor Governance</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 project-item" data-category="tech">
+                    <article class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+                                <span class="project-icon" aria-hidden="true">🐙</span>
+                                <span class="badge bg-secondary">Octopus IoT · 2018–2025</span>
+                            </div>
+
+                            <h3 class="h5 fw-bold">Octopus IoT · Co-founder &amp; COO</h3>
+
+                            <p class="card-text">
+                                Co-founded an IoT security technology start-up, responsible for operations, governance, commercial execution and investor relations from early validation through scaling.
+                            </p>
+
+                            <ul class="small">
+                                <li>Secured <strong>€500K</strong> initial funding.</li>
+                                <li>Achieved <strong>40% month-over-month growth</strong> over 18 months.</li>
+                                <li>Built a repeatable OKR-based operating cadence.</li>
+                            </ul>
+
+                            <div class="d-flex flex-wrap gap-1 mt-3">
+                                <span class="skill-badge">IoT Security</span>
+                                <span class="skill-badge">Start-up</span>
+                                <span class="skill-badge">GDPR</span>
+                                <span class="skill-badge">OKRs</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 project-item" data-category="grc">
+                    <article class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+                                <span class="project-icon" aria-hidden="true">🎓</span>
+                                <span class="badge bg-accent">Zalando · 2021–Present</span>
+                            </div>
+
+                            <h3 class="h5 fw-bold">Compliance Training Programme</h3>
+
+                            <p class="card-text">
+                                Designed and delivered compliance training across internal teams and external partners, embedding accountability and control discipline across the logistics network.
+                            </p>
+
+                            <ul class="small">
+                                <li>Trained <strong>100+ employees</strong> across multiple sites.</li>
+                                <li>Supported <strong>30+ audit programmes</strong>, internal and external.</li>
+                                <li>Strengthened control ownership at site level.</li>
+                            </ul>
+
+                            <div class="d-flex flex-wrap gap-1 mt-3">
+                                <span class="skill-badge">GRC</span>
+                                <span class="skill-badge">Training</span>
+                                <span class="skill-badge">Compliance</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 project-item" data-category="tech">
+                    <article class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start gap-3 mb-2">
+                                <span class="project-icon" aria-hidden="true">💻</span>
+                                <span class="badge bg-secondary">CS50 · 2026</span>
+                            </div>
+
+                            <h3 class="h5 fw-bold">Personal Website · CS50 Homepage</h3>
+
+                            <p class="card-text">
+                                Personal homepage built from scratch as part of Harvard's CS50 course. Fully responsive, with dark mode, scroll animations, form validation and custom CSS.
+                            </p>
+
+                            <ul class="small">
+                                <li>Built with <strong>HTML, CSS, JavaScript</strong> and Bootstrap 5.</li>
+                                <li>Dark mode persisted via <strong>localStorage</strong>.</li>
+                                <li>Structured as a multi-page static website ready for GitHub Pages.</li>
+                            </ul>
+
+                            <div class="d-flex flex-wrap gap-1 mt-3">
+                                <span class="skill-badge">HTML / CSS / JS</span>
+                                <span class="skill-badge">Bootstrap</span>
+                                <span class="skill-badge">GitHub Pages</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-4">
+        <p class="mb-0">&copy; 2026 Michele Sorrentino · Verona, Italy</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script>
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project-item');
+        const darkToggle = document.getElementById('darkToggle');
+
+        filterButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                const selectedCategory = button.dataset.filter;
+
+                filterButtons.forEach(function (btn) {
+                    btn.classList.remove('active');
+                    btn.setAttribute('aria-pressed', 'false');
+                });
+
+                button.classList.add('active');
+                button.setAttribute('aria-pressed', 'true');
+
+                projectItems.forEach(function (item) {
+                    const shouldShow = selectedCategory === 'all' || item.dataset.category === selectedCategory;
+                    item.classList.toggle('d-none', !shouldShow);
+                });
+            });
+        });
+
+        function applyDarkMode(isDark) {
+            document.body.classList.toggle('dark-mode', isDark);
+            darkToggle.textContent = isDark ? '☀️ Light' : '🌙 Dark';
+            darkToggle.setAttribute('aria-pressed', String(isDark));
+            localStorage.setItem('darkMode', String(isDark));
+        }
+
+        darkToggle.addEventListener('click', function () {
+            const isDark = !document.body.classList.contains('dark-mode');
+            applyDarkMode(isDark);
+        });
+
+        applyDarkMode(localStorage.getItem('darkMode') === 'true');
+    </script>
+</body>
+</html>
